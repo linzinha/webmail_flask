@@ -1,0 +1,10 @@
+{"imap defaults" : {
+    "server" : "imap.email.com",
+    "port" : 993,
+    "email" : "user@email.com",
+    "password": "password123"
+    },
+    "json counts" : "emails.json",
+    "config file" : "config.ini",
+    "page count" : 20
+}

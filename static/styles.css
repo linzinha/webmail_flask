@@ -1,0 +1,205 @@
+/* Reset some default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Change the link color to improve visibility */
+a {
+    color: #245e9c; /* Use a contrasting color, such as blue */
+}
+
+/* Change the link color on hover (optional) */
+a:hover {
+    color: #3f97f4; /* Lighter blue color on hover */
+}
+
+
+/* Set the font family to Roboto Mono from Google Fonts */
+body {
+    font-family: 'Roboto Mono', monospace;
+}
+
+/* Use a different font for headings */
+h1, h2, h3 {
+    font-family: 'Lato', sans-serif;
+}
+
+/* Dark mode styles for the header */
+h1 {
+    text-align: center;
+    background-color: #222; /* Dark background color */
+    color: white;
+    padding: 10px;
+    margin: 0;
+}
+
+h2 {
+    font-size: 1.1em;
+}
+
+n3 {
+    font-size: 0.95em;
+}
+
+/* Dark mode styles for the left panel */
+.left-panel {
+    flex: 15vw;
+    background-color: #333; /* Slightly darker background color */
+    padding: 20px;
+}
+
+.left-panel h1, .left-panel h2 {
+    color: #ccc; /* Light gray text color */
+    margin: 10px 0;
+}
+
+.left-panel h1 {
+    font-size: 20px;
+}
+
+/* Style the email list */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    border: 1px solid #444; /* Darker border color */
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #333; /* Dark background color for read emails */
+}
+
+/* Close button styles */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #ccc; /* Light gray color for the close button */
+}
+
+#topSendersList {
+    list-style: none;
+}
+
+/* Email content styles */
+#email-content-wrapper {
+    display: none;
+}
+
+#email-content {
+    background-color: #333; /* Dark background color */
+    padding: 20px;
+    border: 1px solid #444; /* Darker border color */
+    max-height: 85vh;
+    overflow: auto;
+    color: white;
+}
+
+/* Styles for unread emails */
+.unread-email {
+    font-style: italic;
+    color: #4db2b1; /* Teal color for unread emails */
+    background-color: #222; /* Dark background color for unread emails */
+    cursor: pointer;
+}
+
+/* Style pagination controls */
+.pagination {
+    margin-top: 20px;
+}
+
+/* Style the page number as a button */
+.page-number {
+    padding: 5px 10px;
+    background-color: #4db2b1; /* Teal color for the button */
+    color: white;
+    border-radius: 5px;
+    cursor: default; /* Disable cursor for non-clickable button */
+}
+
+.pagination a {
+    text-decoration: none;
+    padding: 5px 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* Style the page number as a button on hover (optional) */
+.page-number:hover {
+    background-color: #4db2b1; /* Teal color on hover */
+}
+
+
+/* Container styles */
+.container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Main content styles */
+.main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.middle-panel {
+    width: 30vw;
+    height: 85vh;
+    background-color: #444; /* Darker background color */
+    overflow: auto;
+    padding: 20px;
+    color: white;
+}
+
+.email {
+    border: 1px solid #333; /* Darker border color */
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #333; /* Dark background color for emails */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+.email:hover {
+    background-color: #444; /* Darker background color on hover */
+}
+
+.right-panel {
+    overflow: scroll;
+    flex: 55vw;
+    background-color: #222; /* Dark background color */
+    padding: 20px;
+    flex-direction: row;
+}
+
+#top-senders {
+    color: #ccc; /* Light gray text color */
+}
+
+#top-senders h1 {
+    font-size: 18px;
+}
+
+#topSendersList {
+    list-style: none;
+    padding: 0;
+}
+
+#topSendersList li {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.bottom-panel {
+    width: 30vw;
+    height: 15vh;
+    background-color: #444; /* Darker background color */
+}

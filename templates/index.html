@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Inbox</title>
+</head>
+<body>
+<h1>Inbox</h1>
+    <div class="container">
+        <div class="left-panel">
+            <h1>Mail Center</h1>
+            <h2>Mailboxes</h2>
+            <ul>
+                <li>
+                    <h3>Inbox {{ unread }} / {{ total }}</h3>
+                </li>
+            </ul>
+            <h2>Top Senders</h2>
+            <h1>Order Tracking?</h1>
+            <h1>Subscriptions Center</h1>
+        </div>
+        <div class="main">
+          <div class="middle-panel">
+            <ul>
+                {% for email in emails %}
+                <li {% if not email.unread %}class="unread-email"{% endif %}>
+                    <div>
+                        {{ email.date }}
+                    </div>
+                    <div>
+                        <strong>From:</strong> {{ email.sender }} <br>
+                        <strong>Subject:</strong> <a href="#" onclick="loadEmailContent('{{ email.email_id }}'); return false;">{{ email.subject }}</a>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+          </div>
+          <div class="bottom-panel">
+            <!-- Pagination controls -->
+            <<!-- Pagination controls -->
+            <div class="pagination">
+                {% if page > 1 %}
+                    <a href="?page={{ page - 1 }}">Previous Page</a>
+                {% endif %}
+
+                <span class="page-number">Page {{ page }}</span> <!-- Apply the .page-number class here -->
+
+                {% if more_emails %}
+                    <a href="?page={{ page + 1 }}">Next Page</a>
+                {% endif %}
+            </div>
+          </div>
+        </div>
+        <div class="right-panel">
+            <!-- Email content wrapper -->
+            <div id="top-senders">
+                <button id="show-data">Refresh</button>
+                <ul id="topSendersList">
+                    <div id="data-container">
+                        <!-- Data will be displayed here -->
+                    </div>
+                </ul>
+            </div>
+            <div id="email-content-wrapper">
+                <a href="#" class="close-button" onclick="closeEmailContent(); return false;">&times;</a>
+                
+                <div id="email-content">
+                <!-- Content loaded via JavaScript will appear here -->
+                </div>
+            </div>
+        </div>
+      </div>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+email_fetch.log
+.drive_sync/.id_774417616952415763
+.drive_sync/*
+.id*
+venv/
+*.pdf
+__pycache__
+static/config.ini

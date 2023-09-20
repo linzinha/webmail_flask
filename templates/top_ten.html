@@ -1,0 +1,15 @@
+<script id="data-template" type="text/x-handlebars-template">
+    <h2>Top 10 Senders:</h2>
+    <ul>
+        {{#each topSenders}}
+            <li>Sender: {{this.sender}}, Count: {{this.count}}</li>
+        {{/each}}
+    </ul>
+
+    <h2>Top 10 Subjects:</h2>
+    <ul>
+        {{#each topSubjects}}
+            <li>Subject: {{this.subject}}, Count: {{this.count}}</li>
+        {{/each}}
+    </ul>
+</script>
