@@ -6,3 +6,4 @@ venv/
 *.pdf
 __pycache__
 static/config.ini
+static/emails.json
